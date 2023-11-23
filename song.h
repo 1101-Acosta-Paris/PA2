@@ -18,8 +18,8 @@ Song(const Song&);
 
 //Methods
 
-string getTitle();
-string getArtist();
+string getTitle() const;
+string getArtist() const;
 Song* getNextSong();
 
 void setTitle(string);

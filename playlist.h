@@ -38,8 +38,8 @@ void addNewSong(const Song, int);
 Playlist& operator =(const Playlist&);
 void operator +(const Song);
 Playlist& operator -(const Playlist&);
-
+friend ostream& operator << (ostream &out, Playlist &c);
 
 };
 
-#endif 
+#endif

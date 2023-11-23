@@ -1,7 +1,7 @@
 #include "playlist.h"
 Playlist::Playlist(){
     playlistName = "Twizzy Tonks Greatest Hits!!!";
-    numsong = -100;
+    numsong = 0;
     firstSong = nullptr;
     lastSong = nullptr;
 }
@@ -108,7 +108,7 @@ Playlist& Playlist::operator =(const Playlist& rhs){
 }
 
 void Playlist::operator +(const Song newsong){
-    addNewSong(newsong);
+    addNewSong(newsong, ++numsong);
 }
 
 string Playlist::getplaylistName(){
@@ -135,10 +135,45 @@ void Playlist::setlastSong(Song* l){
     lastSong = l;
 }
 
-void Playlist::addNewSong(const Song){
+void Playlist::addNewSong(const Song jkdf){
     Song* temp = new Song;
+    
+    // test if already present
+    // if not already present
+
+    temp->setArtist(jkdf.getArtist());
+    temp->setTitle(jkdf.getTitle());
+    temp->setNextSong(nullptr);
+
+    if(numsong = 0){
+        firstSong = lastSong;
+        lastSong = temp;
+    } else {
+        lastSong->setNextSong(temp);
+        lastSong = temp;
+    }
+    numsong++;
+
 }
 
-void addNewSong(const Song, int){
-    
+void Playlist::addNewSong(const Song sonng, int loc){
+    if(loc > numsong){
+        cout << "Invalid index!" << endl;
+        return;
+    }
+    Song * next = new Song;
+    int count = 0;
+    while(count < loc && next != nullptr){
+        
+        if(count == loc){
+
+        }
+    }
+}
+
+ostream & operator << (ostream &out, Playlist &p){
+    if(p.getnumSong() == 0){
+        out << "Playlist is empty!" << endl;
+    }
+    return out;
 }

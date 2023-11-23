@@ -4,7 +4,10 @@
 #include<fstream>
 #include<iostream>
 #include <string>
+#include <dirent.h>
+
 #include "playlist.h"
+
 using namespace std;
 
 void readData(ifstream&, Playlist&); //In the process of implementing

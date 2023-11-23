@@ -16,7 +16,7 @@ int main(int argc, char* argv[]){
     
     Playlist ptrPlaylist;
     fin.open(argv[1]);
-    // readData(fin, ptrPlaylist); //
+    // readData(fin, ptrPlaylist); //reads data from db and places in ptrPlaylist
 
     do{
         cout << "Welcome to Spotify" << endl;
@@ -36,6 +36,7 @@ int main(int argc, char* argv[]){
                     getline(cin >> ws,playlistName);
                 }
                 cout <<"Displaying Available Songs: " << endl;
+                cout << ptrPlaylist << endl;
                 break;
             case 3:
                 return 0;

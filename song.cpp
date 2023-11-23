@@ -4,10 +4,9 @@ Song::Song(){
     title = "Yeat's beginning";
     artist = "Noah Smith";
     nextsong = nullptr;
-
 }
 
-Song::Song(string t, string a,Song* ptr){
+Song::Song(string t, string a, Song* ptr){
     title = t;
     artist = a;
     nextsong = ptr;
@@ -19,12 +18,10 @@ Song::Song(const Song& rhs){
     nextsong = rhs.nextsong;
 }
 
-
-
-string Song::getTitle(){
+string Song::getTitle() const{
     return title;
 }
-string Song::getArtist(){
+string Song::getArtist() const{
     return artist;
 }
 Song* Song::getNextSong(){
