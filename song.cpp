@@ -17,6 +17,13 @@ Song::Song(const Song& rhs){
     artist = rhs.artist;
     nextsong = rhs.nextsong;
 }
+Song& Song::operator=(const Song& rhs){
+    title = rhs.title;
+    artist = rhs.artist;
+    nextsong = rhs.nextsong;
+
+    return *this;
+}
 
 string Song::getTitle() const{
     return title;

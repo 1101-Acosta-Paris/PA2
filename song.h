@@ -14,7 +14,6 @@ public:
 Song();
 Song(string, string , Song*);
 Song(const Song&);
-//~Song();
 
 //Methods
 
@@ -28,8 +27,7 @@ void setNextSong(Song*);
 
 
 friend ostream& operator <<(ostream&, const Song&);
-//assignment operator overload
-//Song& operator =(const Song&);
+Song& operator =(const Song&);
 
 };
 

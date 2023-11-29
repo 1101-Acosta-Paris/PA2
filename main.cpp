@@ -1,9 +1,8 @@
-// main dawg
 #include "song.h"
 #include "playlist.h"
 #include "helpers.h"
-
 int main(int argc, char* argv[]){
+    int count = 1;
     int choice;
     string playlistName;
     string placeholder = "yup yes";
@@ -13,16 +12,13 @@ int main(int argc, char* argv[]){
         cout<< "Please try again by entering the dbSmall.txt File after the executable name. Thank You! \n";
         return 0;
     }
-    
-    Playlist ptrPlaylist;
-    fin.open(argv[1]);
-    // readData(fin, ptrPlaylist); //reads data from db and places in ptrPlaylist
-
-    do{
+    Playlist* ptrPlaylist = new Playlist;
+    fin.open(argv[1]); 
         cout << "Welcome to Spotify" << endl;
         cout << "1.Load an existing playlist.\n2.Create a new playlist.\n3.Exit Spotify"<< endl;
         cout << "Make your selection: ";
         cin >> choice;
+    do{    
         switch(choice){
             case 1:
                 cout << "choice 1 inactive" << endl;
@@ -36,8 +32,12 @@ int main(int argc, char* argv[]){
                     getline(cin >> ws,playlistName);
                 }
                 cout <<"Displaying Available Songs: " << endl;
-                cout << ptrPlaylist << endl;
-                break;
+                readData(fin,*ptrPlaylist);
+                cout << *ptrPlaylist;
+                cout << ptrPlaylist->getnumSong() + 1 << ". Finalize List." <<  endl;
+                cout << ptrPlaylist->getnumSong() + 2 << ". Exit Program." << endl;
+            
+                return 0;
             case 3:
                 return 0;
             default:

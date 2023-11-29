@@ -36,7 +36,7 @@ void setlastSong(Song*);
 Song* getSongAtIndex(int);
 void addNewSong(const Song, int);
 Playlist& operator =(const Playlist&);
-void operator +(const Song);
+void operator +(Song);
 Playlist& operator -(const Playlist&);
 friend ostream& operator << (ostream &out, Playlist &c);
 

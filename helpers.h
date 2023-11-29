@@ -1,14 +1,16 @@
 #ifndef HELP_H
 #define HELP_H
 
+#include <dirent.h>
 #include<fstream>
 #include<iostream>
 #include <string>
-#include <dirent.h>
 
 #include "playlist.h"
-
 using namespace std;
+
+
+
 
 void readData(ifstream&, Playlist&); //In the process of implementing
 bool createNewPlaylist(Playlist&,Playlist&); //In the process of implementing
