@@ -115,6 +115,7 @@ void Playlist::addNewSong(const Song jkdf){
 
 
 void Playlist::addNewSong(const Song song, int loc){
+    int count = 0;
     if(loc > numsong){
         cout << "Invalid index!" << endl;
         return;
@@ -122,9 +123,12 @@ void Playlist::addNewSong(const Song song, int loc){
    
     firstSong = nullptr;
     lastSong = nullptr;
-    
     Song* temp = new Song;
-    int count = 0;
+    for(int i = 0 ; i< loc; i++){
+        
+       // if(song == )
+    }
+
     while(count < loc && temp != nullptr){
         /*
         if(count == loc){
@@ -134,3 +138,25 @@ void Playlist::addNewSong(const Song song, int loc){
     }
 }
 
+Song* Playlist::getSongAtIndex(int index){
+    Song* temp = new Song;
+    int count = 0;
+    while(count<=index){
+        if(count == index){
+            return temp;
+        }
+        temp = temp->getNextSong(); 
+        count++;
+    }
+    return nullptr;
+}
+
+
+
+
+void Playlist::deleteSong(){
+
+}
+void Playlist::deleteSong(int a){
+
+}

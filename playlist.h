@@ -33,12 +33,12 @@ void setfirstSong(Song*);
 void setlastSong(Song*);
 
 //specific functions
-Song* getSongAtIndex(int);
-void addNewSong(const Song, int);
-Playlist& operator =(const Playlist&);
-void operator +(Song);
-Playlist& operator -(const Playlist&);
-friend ostream& operator << (ostream &out, Playlist &c);
+Song* getSongAtIndex(int); //Done
+void addNewSong(const Song, int); //Done
+Playlist& operator =(const Playlist&); //Done
+void operator +(Song); //Done
+Playlist& operator -(const Playlist&);//Need to Implement
+friend ostream& operator << (ostream &out, Playlist &c); //Done
 
 };
 
